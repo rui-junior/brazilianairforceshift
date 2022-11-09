@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/controleusuarios.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Controle usuarios</title>
+</head>
+
+<body>
+
+    <div class="conteiner">
+
+        <%- include("../menu.ejs") %>
+
+        <div class="cerne">
+
+            <div class="menucontrole">
+
+                <a href="/cadastro">cadastrar operador</a>
+
+            </div>
+
+            <div class="usuarios">
+
+                <% if(typeof(msg) != 'undefined'){ %>
+
+                    <div><%= msg %></div>
+        
+                <% } %>
+
+                <% if(typeof(dados) != 'undefined'){ %>
+
+                <ul>
+
+                    <% dados.forEach((user) => { %>
+
+                        <li class="controleusuarios">
+                            <% if(user.administrador){ %>
+
+                                <div><strong><%= user.usuario %></strong></div>
+
+                            <% } else { %>
+
+                                <div><%= user.usuario %></div>
+
+                            <% } %>
+
+                            <div><%= user.legenda %></div>
+
+                            <div>
+                                <a href="/editar?id=<%= user.id %>">[Editar]</a>
+                                <a href="/excluir/<%= user.id %>">[Excluir]</a>
+                            </div>
+                        </li>
+
+                    <% }); %>
+
+                </ul>
+
+                <% } else { %>
+
+                    <div>
+
+                        Não há dados cadastrados
+
+                    </div>
+
+                <% } %>
+
+
+            </div>
+
+            
+
+        </div>
+
+        
+
+    </div>
+
+
+</body>
+
+</html>

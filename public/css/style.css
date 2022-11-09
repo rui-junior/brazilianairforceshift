@@ -1,0 +1,110 @@
+:root {
+  
+  --back-color: #262626;
+  --back-color-card: #595959;
+  --color-primaria-2: #D9D9D9;
+  --color-secundaria-1: #F2F2F2;
+  --color-secundaria-2: #A6A6A6;
+
+  --color-input: #ffffff;
+
+}
+
+a:link, a:before, a:hover, a:visited {
+
+  text-decoration: none!important;
+  color: aliceblue !important;
+
+}
+
+body {
+
+  background-color: var(--back-color) !important;
+  color: aliceblue !important;
+  font-family: Verdana, Tahoma, sans-serif;
+
+}
+
+.conteiner {
+
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+}
+
+.form {
+  
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--back-color-card);
+
+  height: 300px
+
+}
+
+.input{
+
+  position: relative;
+  width: 20vw;
+
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: var(--color-input);
+  background-color: var(--back-color-card);
+
+  margin: 0px 0px 20px 0px;
+
+}
+
+.input::placeholder{
+
+  color: var(--color-input);
+
+}
+
+.divbutton{
+
+  display: flex;
+  justify-content: end;
+
+}
+
+.button {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.button:hover,
+.button:focus {
+  opacity: .75;
+}

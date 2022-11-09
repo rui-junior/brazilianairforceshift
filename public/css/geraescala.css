@@ -1,0 +1,100 @@
+.flex-container {
+
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.flex-items:nth-child(1) {
+
+    display: flex;
+    padding: 10px;
+
+    width: 50%;
+    height: 100%;
+
+
+}
+
+.flex-items:nth-child(2) {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.flex-items:nth-child(2) div {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+}
+
+.indisponibilidadescroll{
+
+    overflow-y: scroll;
+
+}
+
+
+.warning {
+
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 20px;
+
+    background-color: rgb(214, 0, 0);
+
+}
+
+.indisponibilidade {
+
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-size: 16px !important;
+
+
+}
+
+.buttonsend,
+.buttondelete {
+
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.buttoncadastrar{
+
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.buttondelete {
+
+    background-color: #e93c25;
+
+}
